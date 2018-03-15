@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/SouUmLucas/user-project.svg?branch=master)](https://travis-ci.org/SouUmLucas/user-project) [![Maintainability](https://api.codeclimate.com/v1/badges/84723b8231f475e73ef1/maintainability)](https://codeclimate.com/github/SouUmLucas/user-project/maintainability) [![Coverage Status](https://coveralls.io/repos/github/SouUmLucas/user-project/badge.svg)](https://coveralls.io/github/SouUmLucas/user-project)
 
 Disponível em: http://ec2-34-229-214-99.compute-1.amazonaws.com:3000/users
+
 Documentação: http://ec2-34-229-214-99.compute-1.amazonaws.com/users-api-doc/
 
 ##### Configurando
