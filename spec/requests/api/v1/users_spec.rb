@@ -80,4 +80,34 @@ RSpec.describe 'Users API', type: :request do
       end
     end
   end
+
+  describe 'PUT /users' do
+    before do
+      put "/users/#{user_id}", params: { user: user_params }.to_json, headers: headers
+    end
+
+    context 'when the request params are valid' do
+      let(:user_params) { { email: 'new@email.com' } }
+
+      it 'returns status 200' do
+        expect(response).to have_http_status(200)
+      end
+
+      it 'returns updated user json data' do
+        expect(json_body[:email]).to eq(user_params[:email])
+      end
+    end
+
+    context 'when the request params are invalid' do
+      let(:user_params) { { email: 'invalidemail.com' } }
+
+      it 'returns status 422' do
+        expect(response).to have_http_status(422)
+      end
+
+      it 'check if theres error key' do
+        expect(json_body).to have_key(:errors)
+      end
+    end
+  end
 end
