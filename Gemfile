@@ -25,6 +25,7 @@ group :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'factory_bot_rails'
+  gem 'coveralls', require: false
   gem 'simplecov'
   gem 'simplecov-console'
 end
