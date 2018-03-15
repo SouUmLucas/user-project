@@ -49,6 +49,11 @@ Depois de definidas as variáveis de ambiente, rode o seguinte comando para exec
 $ docker-compose run web rake db:create db:migrate
 ```
 
+### Executando os teste
+```
+$ docker-compose run web rspec
+```
+
 ### Executando
 
 Finalmente, para ver a API, basta executar:
