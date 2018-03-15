@@ -13,6 +13,21 @@ RSpec.describe 'Users API', type: :request do
 
   before { host! 'api.users.dev' }
 
+  describe 'GET /users' do
+    before do
+      create_list(:user, 4)
+      get '/users', params: {}, headers: headers
+    end
+
+    it 'returns status code 200' do
+      expect(response).to have_http_status(200)
+    end
+
+    it 'returns 5 users' do
+      expect(json_body.size).to eq 5
+    end
+  end
+
   describe 'GET /users/:id' do
     before do
       get "/users/#{user_id}", params: {}, headers: headers 
