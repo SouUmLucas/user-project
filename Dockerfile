@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
   wget \
   gdebi
 
-RUN mkdir -p /user-project
-WORKDIR /user-project
+RUN mkdir -p /app
+WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 RUN gem install bundler && bundle install --jobs 20 --retry 5

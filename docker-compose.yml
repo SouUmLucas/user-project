@@ -19,6 +19,6 @@ services:
       - 'db'
       - 'redis'
     volumes:
-      - .:/users-project
+      - .:/app
     ports:
       - '3000:3000'
